@@ -53,7 +53,7 @@
 | Бекенд         | Express.js (Node.js)             |
 | База данных    | PostgreSQL |
 | Стилизация     | CSS Modules                      |
-
+    
 ---
 
 ## 🚀 Ожидаемый результат
@@ -76,3 +76,4 @@
 
 ---
 **Ссылка на макета:** https://www.figma.com/design/GB2o0PjBeCJQwgXxqMwiz4/intensive?node-id=1-26&t=Bh0J2qgI07H8sHQ2-0
+для входа в админ панель добовте /admin в конце ссылки 
