@@ -1,0 +1,128 @@
+.main{
+    background-color: #0C0C0C;
+    margin: 0px;
+    position: relative;
+    z-index: 30;
+}
+
+.container__2{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+.cars__grid{
+    padding: 121px 100px;
+    color: #ffffff;
+    display: grid;
+    gap: 30px;
+}
+
+.section__title{
+    color: #ffffff;
+    font-size: 65px;
+    max-width: 1440px;
+    margin: auto;
+    top: 1022px;
+}
+
+.item{
+    overflow: hidden;
+    padding: 20px;
+    background-color: #212121;
+    width: 996px;
+    height: 404px;
+    display: flex;
+    gap: 20px;
+}
+
+.item img{
+   top: 78px;
+   right: -567px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info__text h1{
+    font-size: 30px;
+    line-height: 120%;
+    margin-bottom: 20px;
+    font-weight: normal;
+    
+}
+
+.info__text p{
+    font-size: 16px;
+    line-height: 120%;
+    color: #d4d4d4;
+    max-width: 450px;
+    
+}
+
+.prices{
+    margin-top: 65px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;          
+    justify-content: flex-start;
+    align-items: center; 
+
+}
+
+.prices__item{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.book__button{
+    width: 364px;
+    height: 69px;
+    font-size: 24px;
+}
+
+.book__button:hover{
+    background-color: #F8FF23;
+}
+
+.cars__content{
+    display: flex;
+    padding-top: 60px ; 
+    
+   
+}
+
+.cars__filter{
+    margin-right: 77px;
+    align-self: flex-start;
+    position: sticky;
+    top: 20px;
+     width: 127px;
+    height: 454px;
+}
+
+.cars__filter ul{
+  display:flex ;
+  flex-direction: column;
+  row-gap: 15px;
+  list-style: none;
+}
+
+.cars__filter ul li{
+  width: 127px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid white;
+  font-size: 16px;
+  color: #ffffff;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none; 
+}

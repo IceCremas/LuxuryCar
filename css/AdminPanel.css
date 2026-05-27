@@ -1,0 +1,57 @@
+/* Админ-панель */
+.admin__login, .admin__panel {
+    min-height: 100vh;
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.admin__form, .admin__container {
+    background-color: #2a2a2a;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.admin__form h2, .admin__container h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.admin__form input, .admin__container input, .admin__container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 14px;
+}
+
+.admin__container textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.admin__form button, .admin__container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #F8FF23;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.admin__container button:last-child {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #444;
+}

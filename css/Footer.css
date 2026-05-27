@@ -1,0 +1,30 @@
+.footer__container{
+    height: 110px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 49px 360px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(90deg, #F8FF23, transparent);
+    border-image-slice: 1;
+}
+
+.footer__logo{
+    width: 125px;
+    height: auto;
+}
+
+.footer__container p{
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.footer__logo:hover{
+    transform: scale(1.05);
+}
+
+.footer__container p:hover{
+    transform: scale(1.05);
+}

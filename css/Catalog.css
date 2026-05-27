@@ -1,0 +1,54 @@
+/* Страница каталога */
+.catalog__page {
+    max-width: 1330px;
+    margin: 0 auto;
+    padding: 40px 50px;
+    background-color: #0C0C0C;
+}
+
+/* Горизонтальный фильтр */
+.catalog__filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    
+    padding: 0;
+}
+
+.catalog__filter li {
+    padding: 10px 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+  
+}
+
+.catalog__filter li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.catalog__filter li.active {
+    background-color: #F8FF23;
+    color: #1e1e1e;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .catalog__page {
+        padding: 20px;
+    }
+    
+    .catalog__filter {
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+    
+    .catalog__filter li {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}

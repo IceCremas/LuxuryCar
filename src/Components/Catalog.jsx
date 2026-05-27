@@ -1,16 +1,7 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
-import Header from "./src/Components/Header";
-import Items from "./src/Components/Items";
-import Footer from "./src/Components/Footer";
-import BookingForm from "./src/Components/BookingForm"
-import Catalog from "./src/Components/Catalog"
-import AdminPanel from "./src/Components/AdminPanel";
+import Items from "./Items";
+import Footer from "./Footer";
 
-import './css/Items.css'
-import './css/Catalog.css'
-import './css/AdminPanel.css'
-import './css/Footer.css'
 
 const cars = [
     {
@@ -114,62 +105,38 @@ const cars = [
     }
 ];
 
+const brands = ["Все марки", "BMW", "Mercedes", "Lamborghini", "Ferrari", "Porsche", "Chevrolet"];
 
-function HomePage(){
-    const[currentItems, setCurrentItems] = useState(cars)
+export default function Catalog() {
     const [selectedBrand, setSelectedBrand] = useState("Все марки");
-    const navigate = useNavigate();
 
-     const filteredCars = currentItems.filter(car => {
+    const filteredCars = cars.filter(car => {
         if (selectedBrand === "Все марки") return true;
         return car.name.includes(selectedBrand);
     });
 
-    const hendleBooking = (carName) => {
-        navigate('/booking', {state: {carName}})
-  };
-
-return(
+    return (
         <>
-            <Header />
-            <main className="main"> 
-                <h2 className="section__title ">Выберите автомобиль</h2>
-                <div className="container__2">
-                <div className="cars__content">
-                <aside className="cars__filter">
-                <ul>
-                    <li onClick={() => setSelectedBrand("Все марки")}>Все марки</li>
-                    <li onClick={() => setSelectedBrand("Lamborghini")}>Lamborghini</li>
-                    <li onClick={() => setSelectedBrand("Ferrari")}>Ferrari</li>
-                    <li onClick={() => setSelectedBrand("Porsche")}>Porsche</li>
-                    <li onClick={() => setSelectedBrand("BMW")}>BMW</li>
-                    <li onClick={() => setSelectedBrand("Mercedes")}>Mercedes</li>
-                    <li onClick={() => setSelectedBrand("Chevrolet")}>Chevrolet</li>
-                    <li onClick={() => setSelectedBrand("Audi")}>Audi</li>
-                    <li onClick={() => setSelectedBrand("Ford")}>Ford</li>
-                </ul>
-          </aside>
+        <div className="catalog__page">
+            <ul className="catalog__filter">
+                {brands.map(brand => (
+                    <li 
+                        key={brand}
+                        className={selectedBrand === brand ? "active" : ""}
+                        onClick={() => setSelectedBrand(brand)}
+                    >
+                        {brand}
+                    </li>
+                ))}
+            </ul>
+
+            <div className="cars__grid">
+                {filteredCars.map(item => (
+                    <Items key={item.id} item={item} />
+                ))}
             </div>
-                 <div className="cars__grid">
-                        {filteredCars.map(item => (  
-                            <Items key={item.id} item={item} />
-                        ))}
-                    </div>
-                </div>
-            </main>
-            <Footer />
+        </div>
+        <Footer/>
         </>
-    )
+    );
 }
-    export default function App(){
-        return(
-            
-            <Routes>
-                <Route path="/admin" element={<AdminPanel />} />
-                <Route path="/" element={<HomePage />} />
-                <Route path="/catalog" element={<Catalog/>}/>
-                <Route path="/booking" element={<BookingForm />} />
-            </Routes>
-            
-        )
-    }

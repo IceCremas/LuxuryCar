@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.booking__page {
+    max-width: 1788px;
+    min-height: 904px;
+    display: flex;
+    gap: 40px;
+}
+
+.booking__logo {
+    width: 1218px;
+    height: 800px;
+}
+
+.booking__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.booking__form {
+    color: #ffffff;
+    flex: 1;
+}
+
+.booking__form h2 {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.booking__form h2 strong{
+    font-size: 45px;
+}
+
+.booking__form p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+
+.booking__form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+
+.booking__form input {
+    background-color: transparent;
+    border: 1px solid #ffffff;  
+    width: 100%;                
+    max-width: 344px;
+    height: 68px;
+    padding: 0 15px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.booking__form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.booking__form input:focus {
+    outline: none;
+    border-color: #F8FF23;
+}
+
+.booking__buttons {
+    display: flex;      
+    gap: 20px;         
+
+}
+
+.booking__buttons button{
+    width: 162px;
+    height: 68px;
+    background-color: #F8FF23;
+    
+}
+
