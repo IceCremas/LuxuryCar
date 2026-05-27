@@ -7,7 +7,6 @@ const addCar = async (req, res) => {
         
         const { name, description, img, price_day1, price_day1_3, price_day3_plus } = req.body;
         
-        // Проверка обязательных полей
         if (!name || !description || !img || !price_day1 || !price_day1_3 || !price_day3_plus) {
             console.log('❌ Не все поля заполнены');
             return res.status(400).json({ error: 'Все поля обязательны' });

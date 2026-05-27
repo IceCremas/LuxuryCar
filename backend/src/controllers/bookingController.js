@@ -1,6 +1,5 @@
 const pool = require('../db/pool');
 
-// Создать бронирование
 const createBooking = async (req, res) => {
     try {
         const { car_id, car_name, customer_name, phone, email, days, total_price } = req.body;
@@ -22,7 +21,6 @@ const createBooking = async (req, res) => {
     }
 };
 
-// Получить все бронирования (для админа)
 const getAllBookings = async (req, res) => {
     try {
         const result = await pool.query('SELECT * FROM bookings ORDER BY booking_date DESC');

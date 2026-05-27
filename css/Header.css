@@ -75,7 +75,7 @@ header{
 
 @media (max-width: 768px) {
     body {
-        overflow-x: hidden;    /* убираем горизонтальный скролл */
+        overflow-x: hidden;    
     }
 
     header {
@@ -85,7 +85,7 @@ header{
     }
 
     .container {
-        flex-direction: column;  /* элементы в колонку */
+        flex-direction: column;  
         padding: 20px;
         gap: 20px;
         height: auto;
@@ -104,7 +104,7 @@ header{
     }
 
     .phone__number {
-        width: 100%;             /* на всю ширину */
+        width: 100%;            
         max-width: 300px;
         height: auto;
         padding: 12px 20px;
@@ -113,7 +113,7 @@ header{
     }
 }
 
-/* Секция Hero */
+
 .hero {
     background-color: #1e1e1e;
     position: relative;
